@@ -97,7 +97,7 @@ class AdministradorUsuarios(unittest.TestCase):
                 self.driver.find_element(By.ID, "btnDelete").click()
                 self.driver.find_element(By.ID, "dialogDeleteBtn").click()
 
-        print("US 3 | TC03 - Validar Borrar Nuevo Usuario")
+        print("US 3 | TC04 - Validar Borrar Nuevo Usuario")
 
 
     def tearDown(self):
