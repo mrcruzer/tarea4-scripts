@@ -47,9 +47,14 @@ class Cualificaciones(unittest.TestCase):
 
         for f in range(2, filas + 1):
             for c in range(1, columnas + 1):
-                valores = self.driver.find_element(By.XPATH,"//table[id='recordsListTable']//tbody//tr[" + str(f) + "]/td[" + str(c) + "]").text
+                valores = self.driver.find_element(By.XPATH,"//table[id='recordsListTable']//tbody//tr[" + str(f) + "]/td[" + str(c) + "]").text.__contains__("Skill 1")
+                valores.click()
 
-                print(valores).clic()
+        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Skill 2")
+        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Skill 2")
+        save_skill = self.driver.find_element(By.ID, "btnSave").click()
+
+        print("Prueba Correcta - US 4 | TC01 - Crear, Editar y Borrar Skill")
 
     def test_admin_education(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin ")
@@ -65,9 +70,8 @@ class Cualificaciones(unittest.TestCase):
 
         add = self.driver.find_element(By.ID, "btnAdd").click()
 
-        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Education 1")
-        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Education 1")
-        save_skill = self.driver.find_element(By.ID, "btnSave").click()
+        level = self.driver.find_element(By.ID, 'education_name').send_keys("Education 1")
+        save_level = self.driver.find_element(By.ID, "btnSave").click()
 
         filas = len(self.driver.find_elements(By.XPATH, "//table[@id='recordsListTable']//thead//tr"))
         columnas = len(self.driver.find_elements(By.XPATH, "//table[@id='recordsListTable']//tbody//tr[1]/td"))
@@ -80,17 +84,11 @@ class Cualificaciones(unittest.TestCase):
 
         for f in range(2, filas + 1):
             for c in range(1, columnas + 1):
-                valores = self.driver.find_element(By.XPATH, "//table[id='recordsListTable']//tbody//tr[" + str(
-                        f) + "]/td[" + str(c) + "]").text
+                valores_education = self.driver.find_element(By.XPATH, "//table[id='recordsListTable']//tbody//tr[" + str(f) + "]/td[" + str(c) + "]").text.__contains__("Education 1")
+                valores_education.click()
 
-                print(valores).clic()
-
-
-
-
-
-        #creacion = self.driver.find_element(By.XPATH("//table[@id='recordsListTable']//tbody/tr[2]//td"));
-        #print(creacion.text)
+        level = self.driver.find_element(By.ID, 'education_name').send_keys("Education 2")
+        save_level = self.driver.find_element(By.ID, "btnSave").click()
 
         print("Prueba Correcta - US 4 | TC02 - Crear, Editar y Borrar Education")
 
@@ -108,9 +106,8 @@ class Cualificaciones(unittest.TestCase):
 
         add = self.driver.find_element(By.ID, "btnAdd").click()
 
-        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Licenses 1")
-        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Licenses 1")
-        save_skill = self.driver.find_element(By.ID, "btnSave").click()
+        license_name = self.driver.find_element(By.ID, 'license_name').send_keys("License 1")
+        save_license = self.driver.find_element(By.ID, "btnSave").click()
 
         filas = len(self.driver.find_elements(By.XPATH, "//table[@id='recordsListTable']//thead//tr"))
         columnas = len(self.driver.find_elements(By.XPATH, "//table[@id='recordsListTable']//tbody//tr[1]/td"))
@@ -123,19 +120,13 @@ class Cualificaciones(unittest.TestCase):
 
         for f in range(2, filas + 1):
             for c in range(1, columnas + 1):
-                valores = self.driver.find_element(By.XPATH, "//table[id='recordsListTable']//tbody//tr[" + str(
-                        f) + "]/td[" + str(c) + "]").text
+                valores_licenses = self.driver.find_element(By.XPATH, "//table[id='recordsListTable']//tbody//tr[" + str(f) + "]/td[" + str(c) + "]").text.__contains__("License 1")
+                valores_licenses.click()
 
-                print(valores).click()
+        license_name = self.driver.find_element(By.ID, 'license_name').send_keys("License 2")
+        save_license = self.driver.find_element(By.ID, "btnSave").click()
 
-
-
-
-
-        #creacion = self.driver.find_element(By.XPATH("//table[@id='recordsListTable']//tbody/tr[2]//td"));
-        #print(creacion.text)
-
-        print("Prueba Correcta - US 4 | TC02 - Crear, Editar y Borrar Education")
+        print("Prueba Correcta - US 4 | TC03 - Crear, Editar y Borrar License")
 
 
     def test_admin_languages(self):
@@ -152,9 +143,8 @@ class Cualificaciones(unittest.TestCase):
 
         add = self.driver.find_element(By.ID, "btnAdd").click()
 
-        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Languages 1")
-        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Languages 1")
-        save_skill = self.driver.find_element(By.ID, "btnSave").click()
+        language_name = self.driver.find_element(By.ID, 'language_name').send_keys("Languages 1")
+        save_lenguage = self.driver.find_element(By.ID, "btnSave").click()
 
         filas = len(self.driver.find_elements(By.XPATH, "//table[@id='recordsListTable']//thead//tr"))
         columnas = len(self.driver.find_elements(By.XPATH, "//table[@id='recordsListTable']//tbody//tr[1]/td"))
@@ -167,19 +157,14 @@ class Cualificaciones(unittest.TestCase):
 
         for f in range(2, filas + 1):
             for c in range(1, columnas + 1):
-                valores = self.driver.find_element(By.XPATH, "//table[id='recordsListTable']//tbody//tr[" + str(
-                        f) + "]/td[" + str(c) + "]").text
+                valores_lenguage = self.driver.find_element(By.XPATH, "//table[id='recordsListTable']//tbody//tr[" + str(f) + "]/td[" + str(c) + "]").text.__contains__("Language 1")
+                valores_lenguage.click()
 
-                print(valores).clic()
-
-
-
+        language_name = self.driver.find_element(By.ID, 'language_name').send_keys("Language 2")
+        save_lenguage = self.driver.find_element(By.ID, "btnSave").click()
 
 
-        #creacion = self.driver.find_element(By.XPATH("//table[@id='recordsListTable']//tbody/tr[2]//td"));
-        #print(creacion.text)
-
-        print("Prueba Correcta - US 4 | TC02 - Crear, Editar y Borrar Education")
+        print("Prueba Correcta - US 4 | TC04 - Crear, Editar y Borrar Language")
 
 
     def test_admin_membership(self):
@@ -196,8 +181,7 @@ class Cualificaciones(unittest.TestCase):
 
         add = self.driver.find_element(By.ID, "btnAdd").click()
 
-        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Membership 1")
-        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Membership 1")
+        membership_name = self.driver.find_element(By.ID, 'membership_name').send_keys("Membership 1")
         save_skill = self.driver.find_element(By.ID, "btnSave").click()
 
         filas = len(self.driver.find_elements(By.XPATH, "//table[@id='recordsListTable']//thead//tr"))
@@ -211,19 +195,13 @@ class Cualificaciones(unittest.TestCase):
 
         for f in range(2, filas + 1):
             for c in range(1, columnas + 1):
-                valores = self.driver.find_element(By.XPATH, "//table[id='recordsListTable']//tbody//tr[" + str(
-                        f) + "]/td[" + str(c) + "]").text
+                valores_membership = self.driver.find_element(By.XPATH, "//table[id='recordsListTable']//tbody//tr[" + str(f) + "]/td[" + str(c) + "]").text.__contains__("Membership 1")
+                valores_membership.click()
 
-                print(valores).clic()
+        membership_name = self.driver.find_element(By.ID, 'membership_name').send_keys("Membership 2")
+        save_membership = self.driver.find_element(By.ID, "btnSave").click()
 
-
-
-
-
-        #creacion = self.driver.find_element(By.XPATH("//table[@id='recordsListTable']//tbody/tr[2]//td"));
-        #print(creacion.text)
-
-        print("Prueba Correcta - US 4 | TC02 - Crear, Editar y Borrar Education")
+        print("Prueba Correcta - US 4 | TC05 - Crear, Editar y Borrar Membership")
 
 
 

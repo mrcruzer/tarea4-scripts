@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2022-08-15 18:04:44</p>
+                <p class='attribute'><strong>Duration: </strong>151.16 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 5, Pass: 0, Error: 5</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.Cualificaciones</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_admin_education</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=104.0.5112.81)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A078B3+2193587]
+	Ordinal0 [0x009A0681+1771137]
+	Ordinal0 [0x008B4070+802928]
+	Ordinal0 [0x008DDB83+973699]
+	Ordinal0 [0x008DD25C+971356]
+	Ordinal0 [0x008FD7AC+1103788]
+	Ordinal0 [0x008D8C04+953348]
+	Ordinal0 [0x008FD9C4+1104324]
+	Ordinal0 [0x0090DAE2+1170146]
+	Ordinal0 [0x008FD5C6+1103302]
+	Ordinal0 [0x008D77E0+948192]
+	Ordinal0 [0x008D86E6+952038]
+	GetHandleVerifier [0x00CB0CB2+2738370]
+	GetHandleVerifier [0x00CA21B8+2678216]
+	GetHandleVerifier [0x00A917AA+512954]
+	GetHandleVerifier [0x00A90856+509030]
+	Ordinal0 [0x009A743B+1799227]
+	Ordinal0 [0x009ABB68+1817448]
+	Ordinal0 [0x009ABC55+1817685]
+	Ordinal0 [0x009B5230+1856048]
+	BaseThreadInitThunk [0x76A36739+25]
+	RtlGetFullPathName_UEx [0x776F90AF+1215]
+	RtlGetFullPathName_UEx [0x776F907D+1165]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\Numbers Tech\Desktop\Python\tarea4-pruebas\US_4-Cualificaciones.py", line 90, in test_admin_education
+    level = self.driver.find_element(By.ID, 'education_name').send_keys("Education 2")
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 223, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 396, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 435, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=104.0.5112.81)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A078B3+2193587]
+	Ordinal0 [0x009A0681+1771137]
+	Ordinal0 [0x008B4070+802928]
+	Ordinal0 [0x008DDB83+973699]
+	Ordinal0 [0x008DD25C+971356]
+	Ordinal0 [0x008FD7AC+1103788]
+	Ordinal0 [0x008D8C04+953348]
+	Ordinal0 [0x008FD9C4+1104324]
+	Ordinal0 [0x0090DAE2+1170146]
+	Ordinal0 [0x008FD5C6+1103302]
+	Ordinal0 [0x008D77E0+948192]
+	Ordinal0 [0x008D86E6+952038]
+	GetHandleVerifier [0x00CB0CB2+2738370]
+	GetHandleVerifier [0x00CA21B8+2678216]
+	GetHandleVerifier [0x00A917AA+512954]
+	GetHandleVerifier [0x00A90856+509030]
+	Ordinal0 [0x009A743B+1799227]
+	Ordinal0 [0x009ABB68+1817448]
+	Ordinal0 [0x009ABC55+1817685]
+	Ordinal0 [0x009B5230+1856048]
+	BaseThreadInitThunk [0x76A36739+25]
+	RtlGetFullPathName_UEx [0x776F90AF+1215]
+	RtlGetFullPathName_UEx [0x776F907D+1165]
+
+
+
+====== WebDriver manager ======
+Current google-chrome version is 104.0.5112
+Get LATEST chromedriver version for 104.0.5112 google-chrome
+Driver [C:\Users\Numbers Tech\.wdm\drivers\chromedriver\win32\104.0.5112.79\chromedriver.exe] found in cache
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_admin_languages</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=104.0.5112.81)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A078B3+2193587]
+	Ordinal0 [0x009A0681+1771137]
+	Ordinal0 [0x008B4070+802928]
+	Ordinal0 [0x008DDB83+973699]
+	Ordinal0 [0x008DD25C+971356]
+	Ordinal0 [0x008FD7AC+1103788]
+	Ordinal0 [0x008D8C04+953348]
+	Ordinal0 [0x008FD9C4+1104324]
+	Ordinal0 [0x0090DAE2+1170146]
+	Ordinal0 [0x008FD5C6+1103302]
+	Ordinal0 [0x008D77E0+948192]
+	Ordinal0 [0x008D86E6+952038]
+	GetHandleVerifier [0x00CB0CB2+2738370]
+	GetHandleVerifier [0x00CA21B8+2678216]
+	GetHandleVerifier [0x00A917AA+512954]
+	GetHandleVerifier [0x00A90856+509030]
+	Ordinal0 [0x009A743B+1799227]
+	Ordinal0 [0x009ABB68+1817448]
+	Ordinal0 [0x009ABC55+1817685]
+	Ordinal0 [0x009B5230+1856048]
+	BaseThreadInitThunk [0x76A36739+25]
+	RtlGetFullPathName_UEx [0x776F90AF+1215]
+	RtlGetFullPathName_UEx [0x776F907D+1165]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\Numbers Tech\Desktop\Python\tarea4-pruebas\US_4-Cualificaciones.py", line 163, in test_admin_languages
+    language_name = self.driver.find_element(By.ID, 'language_name').send_keys("Language 2")
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 223, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 396, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 435, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=104.0.5112.81)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A078B3+2193587]
+	Ordinal0 [0x009A0681+1771137]
+	Ordinal0 [0x008B4070+802928]
+	Ordinal0 [0x008DDB83+973699]
+	Ordinal0 [0x008DD25C+971356]
+	Ordinal0 [0x008FD7AC+1103788]
+	Ordinal0 [0x008D8C04+953348]
+	Ordinal0 [0x008FD9C4+1104324]
+	Ordinal0 [0x0090DAE2+1170146]
+	Ordinal0 [0x008FD5C6+1103302]
+	Ordinal0 [0x008D77E0+948192]
+	Ordinal0 [0x008D86E6+952038]
+	GetHandleVerifier [0x00CB0CB2+2738370]
+	GetHandleVerifier [0x00CA21B8+2678216]
+	GetHandleVerifier [0x00A917AA+512954]
+	GetHandleVerifier [0x00A90856+509030]
+	Ordinal0 [0x009A743B+1799227]
+	Ordinal0 [0x009ABB68+1817448]
+	Ordinal0 [0x009ABC55+1817685]
+	Ordinal0 [0x009B5230+1856048]
+	BaseThreadInitThunk [0x76A36739+25]
+	RtlGetFullPathName_UEx [0x776F90AF+1215]
+	RtlGetFullPathName_UEx [0x776F907D+1165]
+
+
+
+====== WebDriver manager ======
+Current google-chrome version is 104.0.5112
+Get LATEST chromedriver version for 104.0.5112 google-chrome
+Driver [C:\Users\Numbers Tech\.wdm\drivers\chromedriver\win32\104.0.5112.79\chromedriver.exe] found in cache
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_admin_licenses</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=104.0.5112.81)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A078B3+2193587]
+	Ordinal0 [0x009A0681+1771137]
+	Ordinal0 [0x008B4070+802928]
+	Ordinal0 [0x008DDB83+973699]
+	Ordinal0 [0x008DD25C+971356]
+	Ordinal0 [0x008FD7AC+1103788]
+	Ordinal0 [0x008D8C04+953348]
+	Ordinal0 [0x008FD9C4+1104324]
+	Ordinal0 [0x0090DAE2+1170146]
+	Ordinal0 [0x008FD5C6+1103302]
+	Ordinal0 [0x008D77E0+948192]
+	Ordinal0 [0x008D86E6+952038]
+	GetHandleVerifier [0x00CB0CB2+2738370]
+	GetHandleVerifier [0x00CA21B8+2678216]
+	GetHandleVerifier [0x00A917AA+512954]
+	GetHandleVerifier [0x00A90856+509030]
+	Ordinal0 [0x009A743B+1799227]
+	Ordinal0 [0x009ABB68+1817448]
+	Ordinal0 [0x009ABC55+1817685]
+	Ordinal0 [0x009B5230+1856048]
+	BaseThreadInitThunk [0x76A36739+25]
+	RtlGetFullPathName_UEx [0x776F90AF+1215]
+	RtlGetFullPathName_UEx [0x776F907D+1165]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\Numbers Tech\Desktop\Python\tarea4-pruebas\US_4-Cualificaciones.py", line 126, in test_admin_licenses
+    license_name = self.driver.find_element(By.ID, 'license_name').send_keys("License 2")
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 223, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 396, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 435, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=104.0.5112.81)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A078B3+2193587]
+	Ordinal0 [0x009A0681+1771137]
+	Ordinal0 [0x008B4070+802928]
+	Ordinal0 [0x008DDB83+973699]
+	Ordinal0 [0x008DD25C+971356]
+	Ordinal0 [0x008FD7AC+1103788]
+	Ordinal0 [0x008D8C04+953348]
+	Ordinal0 [0x008FD9C4+1104324]
+	Ordinal0 [0x0090DAE2+1170146]
+	Ordinal0 [0x008FD5C6+1103302]
+	Ordinal0 [0x008D77E0+948192]
+	Ordinal0 [0x008D86E6+952038]
+	GetHandleVerifier [0x00CB0CB2+2738370]
+	GetHandleVerifier [0x00CA21B8+2678216]
+	GetHandleVerifier [0x00A917AA+512954]
+	GetHandleVerifier [0x00A90856+509030]
+	Ordinal0 [0x009A743B+1799227]
+	Ordinal0 [0x009ABB68+1817448]
+	Ordinal0 [0x009ABC55+1817685]
+	Ordinal0 [0x009B5230+1856048]
+	BaseThreadInitThunk [0x76A36739+25]
+	RtlGetFullPathName_UEx [0x776F90AF+1215]
+	RtlGetFullPathName_UEx [0x776F907D+1165]
+
+
+
+====== WebDriver manager ======
+Current google-chrome version is 104.0.5112
+Get LATEST chromedriver version for 104.0.5112 google-chrome
+Driver [C:\Users\Numbers Tech\.wdm\drivers\chromedriver\win32\104.0.5112.79\chromedriver.exe] found in cache
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_admin_membership</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=104.0.5112.81)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A078B3+2193587]
+	Ordinal0 [0x009A0681+1771137]
+	Ordinal0 [0x008B4070+802928]
+	Ordinal0 [0x008DDB83+973699]
+	Ordinal0 [0x008DD25C+971356]
+	Ordinal0 [0x008FD7AC+1103788]
+	Ordinal0 [0x008D8C04+953348]
+	Ordinal0 [0x008FD9C4+1104324]
+	Ordinal0 [0x0090DAE2+1170146]
+	Ordinal0 [0x008FD5C6+1103302]
+	Ordinal0 [0x008D77E0+948192]
+	Ordinal0 [0x008D86E6+952038]
+	GetHandleVerifier [0x00CB0CB2+2738370]
+	GetHandleVerifier [0x00CA21B8+2678216]
+	GetHandleVerifier [0x00A917AA+512954]
+	GetHandleVerifier [0x00A90856+509030]
+	Ordinal0 [0x009A743B+1799227]
+	Ordinal0 [0x009ABB68+1817448]
+	Ordinal0 [0x009ABC55+1817685]
+	Ordinal0 [0x009B5230+1856048]
+	BaseThreadInitThunk [0x76A36739+25]
+	RtlGetFullPathName_UEx [0x776F90AF+1215]
+	RtlGetFullPathName_UEx [0x776F907D+1165]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\Numbers Tech\Desktop\Python\tarea4-pruebas\US_4-Cualificaciones.py", line 201, in test_admin_membership
+    membership_name = self.driver.find_element(By.ID, 'membership_name').send_keys("Membership 2")
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 223, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 396, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 435, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=104.0.5112.81)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A078B3+2193587]
+	Ordinal0 [0x009A0681+1771137]
+	Ordinal0 [0x008B4070+802928]
+	Ordinal0 [0x008DDB83+973699]
+	Ordinal0 [0x008DD25C+971356]
+	Ordinal0 [0x008FD7AC+1103788]
+	Ordinal0 [0x008D8C04+953348]
+	Ordinal0 [0x008FD9C4+1104324]
+	Ordinal0 [0x0090DAE2+1170146]
+	Ordinal0 [0x008FD5C6+1103302]
+	Ordinal0 [0x008D77E0+948192]
+	Ordinal0 [0x008D86E6+952038]
+	GetHandleVerifier [0x00CB0CB2+2738370]
+	GetHandleVerifier [0x00CA21B8+2678216]
+	GetHandleVerifier [0x00A917AA+512954]
+	GetHandleVerifier [0x00A90856+509030]
+	Ordinal0 [0x009A743B+1799227]
+	Ordinal0 [0x009ABB68+1817448]
+	Ordinal0 [0x009ABC55+1817685]
+	Ordinal0 [0x009B5230+1856048]
+	BaseThreadInitThunk [0x76A36739+25]
+	RtlGetFullPathName_UEx [0x776F90AF+1215]
+	RtlGetFullPathName_UEx [0x776F907D+1165]
+
+
+
+====== WebDriver manager ======
+Current google-chrome version is 104.0.5112
+Get LATEST chromedriver version for 104.0.5112 google-chrome
+Driver [C:\Users\Numbers Tech\.wdm\drivers\chromedriver\win32\104.0.5112.79\chromedriver.exe] found in cache
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_admin_skill</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=104.0.5112.81)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A078B3+2193587]
+	Ordinal0 [0x009A0681+1771137]
+	Ordinal0 [0x008B4070+802928]
+	Ordinal0 [0x008DDB83+973699]
+	Ordinal0 [0x008DD25C+971356]
+	Ordinal0 [0x008FD7AC+1103788]
+	Ordinal0 [0x008D8C04+953348]
+	Ordinal0 [0x008FD9C4+1104324]
+	Ordinal0 [0x0090DAE2+1170146]
+	Ordinal0 [0x008FD5C6+1103302]
+	Ordinal0 [0x008D77E0+948192]
+	Ordinal0 [0x008D86E6+952038]
+	GetHandleVerifier [0x00CB0CB2+2738370]
+	GetHandleVerifier [0x00CA21B8+2678216]
+	GetHandleVerifier [0x00A917AA+512954]
+	GetHandleVerifier [0x00A90856+509030]
+	Ordinal0 [0x009A743B+1799227]
+	Ordinal0 [0x009ABB68+1817448]
+	Ordinal0 [0x009ABC55+1817685]
+	Ordinal0 [0x009B5230+1856048]
+	BaseThreadInitThunk [0x76A36739+25]
+	RtlGetFullPathName_UEx [0x776F90AF+1215]
+	RtlGetFullPathName_UEx [0x776F907D+1165]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\Numbers Tech\Desktop\Python\tarea4-pruebas\US_4-Cualificaciones.py", line 53, in test_admin_skill
+    name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Skill 2")
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 223, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py", line 396, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py", line 435, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Numbers Tech\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=104.0.5112.81)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A078B3+2193587]
+	Ordinal0 [0x009A0681+1771137]
+	Ordinal0 [0x008B4070+802928]
+	Ordinal0 [0x008DDB83+973699]
+	Ordinal0 [0x008DD25C+971356]
+	Ordinal0 [0x008FD7AC+1103788]
+	Ordinal0 [0x008D8C04+953348]
+	Ordinal0 [0x008FD9C4+1104324]
+	Ordinal0 [0x0090DAE2+1170146]
+	Ordinal0 [0x008FD5C6+1103302]
+	Ordinal0 [0x008D77E0+948192]
+	Ordinal0 [0x008D86E6+952038]
+	GetHandleVerifier [0x00CB0CB2+2738370]
+	GetHandleVerifier [0x00CA21B8+2678216]
+	GetHandleVerifier [0x00A917AA+512954]
+	GetHandleVerifier [0x00A90856+509030]
+	Ordinal0 [0x009A743B+1799227]
+	Ordinal0 [0x009ABB68+1817448]
+	Ordinal0 [0x009ABC55+1817685]
+	Ordinal0 [0x009B5230+1856048]
+	BaseThreadInitThunk [0x76A36739+25]
+	RtlGetFullPathName_UEx [0x776F90AF+1215]
+	RtlGetFullPathName_UEx [0x776F907D+1165]
+
+
+
+====== WebDriver manager ======
+Current google-chrome version is 104.0.5112
+Get LATEST chromedriver version for 104.0.5112 google-chrome
+Driver [C:\Users\Numbers Tech\.wdm\drivers\chromedriver\win32\104.0.5112.79\chromedriver.exe] found in cache
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 5, Pass: 0, Error: 5 -- Duration: 151.16 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
