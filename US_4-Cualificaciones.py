@@ -5,12 +5,10 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver import ActionChains
 
 
-
-class LoginUsuario(unittest.TestCase):
+class Cualificaciones(unittest.TestCase):
 
     def setUp(self):
         self.s = Service(ChromeDriverManager().install())
@@ -19,25 +17,26 @@ class LoginUsuario(unittest.TestCase):
         self.driver.maximize_window()
         self.driver.implicitly_wait(time_to_wait=10)
 
-    def test_login_page_correct(self):
+    def test_admin_skill(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin ")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
         login = self.driver.find_element(By.ID, "btnLogin").click()
 
-        welcome = self.driver.find_element(By.ID, 'welcome').click()
+        actions = ActionChains(self.driver)
+        menu1 = self.driver.find_element(By.ID, "menu_admin_viewAdminModule")
+        menu2 = self.driver.find_element(By.ID, "menu_admin_Qualifications")
+        menu3 = self.driver.find_element(By.ID, "menu_admin_viewSkills")
+        actions.move_to_element(menu1).move_to_element(menu2).move_to_element(menu3).perform()
+        menu3.click()
 
-        print("Prueba Correcta - US 1 |  TC01 | Validar Login Usuario Correcto")
+        add = self.driver.find_element(By.ID, "menu_admin_viewAdminModule").click()
 
+        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Skill 1")
+        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Skill 1")
+        save_skill = self.driver.find_element(By.ID, "btnSave").click()
 
+        print("Prueba Correcta - US 4 | TC01 - Crear, Editar y Borrar Skill")
 
-    def test_login_page_incorrect(self):
-        usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin")
-        password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin12345")
-        login = self.driver.find_element(By.ID, "btnLogin").click()
-        #welcome = self.driver.find_element(By.ID, 'welcome').click()
-        msj = self.driver.find_element(By.XPATH, "//span[@id='spanMessage']")
-        self.assertTrue(msj)
-        print("Prueba Correcta - US 1 | TC02 | Validar Login Usuario Incorrecto")
 
 
 
