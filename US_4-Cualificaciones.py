@@ -59,14 +59,14 @@ class Cualificaciones(unittest.TestCase):
         actions = ActionChains(self.driver)
         menu1 = self.driver.find_element(By.ID, "menu_admin_viewAdminModule")
         menu2 = self.driver.find_element(By.ID, "menu_admin_Qualifications")
-        menu3 = self.driver.find_element(By.ID, "menu_admin_viewSkills")
+        menu3 = self.driver.find_element(By.ID, "menu_admin_viewEducation")
         actions.move_to_element(menu1).move_to_element(menu2).move_to_element(menu3).perform()
         menu3.click()
 
         add = self.driver.find_element(By.ID, "btnAdd").click()
 
-        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Skill 1")
-        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Skill 1")
+        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Education 1")
+        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Education 1")
         save_skill = self.driver.find_element(By.ID, "btnSave").click()
 
         filas = len(self.driver.find_elements(By.XPATH, "//table[@id='recordsListTable']//thead//tr"))
@@ -94,7 +94,7 @@ class Cualificaciones(unittest.TestCase):
 
         print("Prueba Correcta - US 4 | TC02 - Crear, Editar y Borrar Education")
 
-    def test_admin_license(self):
+    def test_admin_licenses(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin ")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin123")
         login = self.driver.find_element(By.ID, "btnLogin").click()
@@ -102,14 +102,14 @@ class Cualificaciones(unittest.TestCase):
         actions = ActionChains(self.driver)
         menu1 = self.driver.find_element(By.ID, "menu_admin_viewAdminModule")
         menu2 = self.driver.find_element(By.ID, "menu_admin_Qualifications")
-        menu3 = self.driver.find_element(By.ID, "menu_admin_viewSkills")
+        menu3 = self.driver.find_element(By.ID, "menu_admin_viewLicenses")
         actions.move_to_element(menu1).move_to_element(menu2).move_to_element(menu3).perform()
         menu3.click()
 
         add = self.driver.find_element(By.ID, "btnAdd").click()
 
-        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Skill 1")
-        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Skill 1")
+        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Licenses 1")
+        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Licenses 1")
         save_skill = self.driver.find_element(By.ID, "btnSave").click()
 
         filas = len(self.driver.find_elements(By.XPATH, "//table[@id='recordsListTable']//thead//tr"))
@@ -146,14 +146,14 @@ class Cualificaciones(unittest.TestCase):
         actions = ActionChains(self.driver)
         menu1 = self.driver.find_element(By.ID, "menu_admin_viewAdminModule")
         menu2 = self.driver.find_element(By.ID, "menu_admin_Qualifications")
-        menu3 = self.driver.find_element(By.ID, "menu_admin_viewSkills")
+        menu3 = self.driver.find_element(By.ID, "menu_admin_viewLanguages")
         actions.move_to_element(menu1).move_to_element(menu2).move_to_element(menu3).perform()
         menu3.click()
 
         add = self.driver.find_element(By.ID, "btnAdd").click()
 
-        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Skill 1")
-        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Skill 1")
+        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Languages 1")
+        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Languages 1")
         save_skill = self.driver.find_element(By.ID, "btnSave").click()
 
         filas = len(self.driver.find_elements(By.XPATH, "//table[@id='recordsListTable']//thead//tr"))
@@ -190,14 +190,14 @@ class Cualificaciones(unittest.TestCase):
         actions = ActionChains(self.driver)
         menu1 = self.driver.find_element(By.ID, "menu_admin_viewAdminModule")
         menu2 = self.driver.find_element(By.ID, "menu_admin_Qualifications")
-        menu3 = self.driver.find_element(By.ID, "menu_admin_viewSkills")
+        menu3 = self.driver.find_element(By.ID, "menu_admin_membership")
         actions.move_to_element(menu1).move_to_element(menu2).move_to_element(menu3).perform()
         menu3.click()
 
         add = self.driver.find_element(By.ID, "btnAdd").click()
 
-        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Skill 1")
-        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Skill 1")
+        name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Membership 1")
+        description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Membership 1")
         save_skill = self.driver.find_element(By.ID, "btnSave").click()
 
         filas = len(self.driver.find_elements(By.XPATH, "//table[@id='recordsListTable']//thead//tr"))
