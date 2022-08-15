@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver import ActionChains
+from selenium.webdriver.support.ui import Select
 
 
 class Cualificaciones(unittest.TestCase):
@@ -29,11 +30,33 @@ class Cualificaciones(unittest.TestCase):
         actions.move_to_element(menu1).move_to_element(menu2).move_to_element(menu3).perform()
         menu3.click()
 
-        add = self.driver.find_element(By.ID, "menu_admin_viewAdminModule").click()
+        add = self.driver.find_element(By.ID, "btnAdd").click()
 
         name_skill = self.driver.find_element(By.ID, 'skill_name').send_keys("Skill 1")
         description_skill = self.driver.find_element(By.ID, 'skill_description').send_keys("Description Skill 1")
         save_skill = self.driver.find_element(By.ID, "btnSave").click()
+
+        filas = len(self.driver.find_elements(By.XPATH, "//table[@id='recordsListTable']//thead//tr"))
+        columnas = len(self.driver.find_elements(By.XPATH, "//table[@id='recordsListTable']//tbody//tr[1]/td"))
+
+        #print(filas)
+        #print(columnas)
+
+        for f in range(2, filas+1):
+            print(f)
+
+        for f in range(2, filas + 1):
+            for c in range(1, columnas + 1):
+                valores = self.driver.find_element(By.XPATH,"//table[id='recordsListTable']//tbody//tr[" + str(f) + "]/td[" + str(c) + "]").text
+
+                print(valores).clic()
+
+
+
+
+
+        #creacion = self.driver.find_element(By.XPATH("//table[@id='recordsListTable']//tbody/tr[2]//td"));
+        #print(creacion.text)
 
         print("Prueba Correcta - US 4 | TC01 - Crear, Editar y Borrar Skill")
 
