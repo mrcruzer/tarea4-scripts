@@ -2,6 +2,7 @@ import HtmlTestRunner
 from selenium import webdriver
 import unittest
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -29,23 +30,30 @@ class AdministradorUsuarios(unittest.TestCase):
         rol = self.driver.find_element(By.ID, "systemUser_userType")
         rol.is_selected()
 
-        print("Prueba Correcta - US 3 |  TC01 | Validar Login Usuario Correcto")
+        empleado_name = self.driver.find_element(By.ID, "systemUser_employeeName_empName").send_keys("Alice Duval")
+
+        username = self.driver.find_element(By.ID,"systemUser_userName").send_keys("usuario1")
+
+        status = self.driver.find_element(By.ID,"systemUser_status")
+        status.is_selected()
+
+        password = self.driver.find_element(By.ID,"systemUser_password").send_keys("CERtificado14")
+        confirm_password = self.driver.find_element(By.ID,"systemUser_confirmPassword").send_keys("CERtificado14")
+
+        guardar = self.driver.find_element(By.ID,"btnSave").click()
 
 
 
-    '''def test_login_page_incorrect(self):
+   '''def test_buscar_usuario(self):
         usuario = self.driver.find_element(By.ID, 'txtUsername').send_keys("Admin")
         password = self.driver.find_element(By.ID, 'txtPassword').send_keys("admin12345")
         login = self.driver.find_element(By.ID, "btnLogin").click()
-        #welcome = self.driver.find_element(By.ID, 'welcome').click()
-        msj = self.driver.find_element(By.XPATH, "//span[@id='spanMessage']")
-        self.assertTrue(msj)
-        print("Prueba Correcta - US 1 | TC02 | Validar Login Usuario Incorrecto")'''
+        admin = self.driver.find_element(By.ID, "menu_admin_viewAdminModule").click()
 
 
 
-    def tearDown(self):
-        self.driver.quit()
+   def tearDown(self):
+        self.driver.quit()'''
 
 
 
